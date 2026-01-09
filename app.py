@@ -986,7 +986,7 @@ else:
     k1, k2, k3, k4, k5 = st.columns(5)
     
     k1.metric("전체 세대", f"{total_cnt}세대")
-    k2.metric("동의 세대", f"{agree_cnt}세대")
+    k2.metric("동의서 제출 완료 세대", f"{agree_cnt}세대")
     k3.metric("🚫 연락|방문 금지", f"{disagree_cnt}세대")
     k4.metric("답변 대기중", f"{waiting_cnt}세대")
     k5.metric("동의율", f"{agree_rate:.1f}%")
