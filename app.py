@@ -835,7 +835,7 @@ def load_data():
         creds_dict = st.secrets["gcp_service_account"]
         creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
         client = gspread.authorize(creds)
-        sheet = client.open("sanho_db_real").worksheet("data")
+        sheet = client.open("real_sanho_db").worksheet("data")
         data = sheet.get_all_records()
         df = pd.DataFrame(data)
 
