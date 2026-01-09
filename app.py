@@ -707,7 +707,7 @@ def check_password():
 # ---------------------------------------------------------
 # 1. 페이지 설정 및 디자인 (CSS)
 # ---------------------------------------------------------
-st.set_page_config(layout="wide", page_title="산호 사전동의 현황")
+st.set_page_config(layout="wide", page_title="산호 서면동의 현황")
 
 if not check_password():
     st.stop()
@@ -981,7 +981,7 @@ else:
     # 동의율 (전체 중 찬성 비율)
     agree_rate = (agree_cnt / total_cnt * 100) if total_cnt > 0 else 0
     
-    st.title("산호 사전동의 현황")
+    st.title("산호 서면동의 현황")
     
     k1, k2, k3, k4, k5 = st.columns(5)
     
@@ -994,10 +994,10 @@ else:
     st.markdown("""
     <div style="font-size:14px; color:#555; margin-top:10px; padding:10px; background-color:#f8f9fa; border-radius:5px;">
         <strong>[범례 가이드]</strong><br>
-        🟦 <b>파란색 (동의):</b> 동의 의사 밝힌 세대<br> 
-        🟥 <b>빨간색 (연락금지):</b> 연락 및 방문 금지 세대<br>
+        🟦 <b>파란색 (동의):</b> 동의서 제출 완료 세대<br> 
+        🟥 <b>빨간색 (연락금지):</b> 절대 연락 및 방문 금지 세대<br>
         🟨 <b>노란색 (답변대기중):</b> 소유자에 연락했으나 미회신 세대<br>
-        ⬜ <b>흰색 (미접수):</b> 아직 연락되지 않은 세대
+        ⬜ <b>흰색 (미접수):</b> 아직 아예 연락되지 않은 세대
     </div>
     """, unsafe_allow_html=True)
         
